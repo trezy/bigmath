@@ -1,0 +1,27 @@
+{
+  "projectName": "@trezy/bigmath",
+  "projectOwner": "trezy",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 50,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "trezy",
+      "name": "Trezy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/442980?v=4",
+      "profile": "http://trezy.com/",
+      "contributions": [
+        "code",
+        "ideas",
+        "infra",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

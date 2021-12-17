@@ -14,7 +14,7 @@
   "scripts": {
     "prepublish": "jsdoc -t node_modules/tsd-jsdoc/dist -r lib/. -d types",
     "semantic-release": "semantic-release",
-    "test": "nyc mocha --experimental-loader=@istanbuljs/esm-loader-hook"
+    "test": "NODE_ENV=test nyc mocha --experimental-loader=@istanbuljs/esm-loader-hook"
   },
   "devDependencies": {
     "@istanbuljs/esm-loader-hook": "^0.1.2",

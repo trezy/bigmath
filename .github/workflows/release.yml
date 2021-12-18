@@ -56,6 +56,6 @@ jobs:
             docs(*): update the changelog
             [skip ci]
           force-add: 'true'
-          files: ${{ inputs.package-directory }}/CHANGELOG.md
+          files: ${{ github.workspace }}/CHANGELOG.md
           name: semantic-release
           email: semantic-release@trezy.com

@@ -6,8 +6,9 @@
   "files": [
     "README.md"
   ],
+  "badgeTemplate": "[![PRs Welcome][prs-badge]][prs]\n[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=flat-square)](#contributors-)\n[![Code of Conduct][code-of-conduct-badge]][code-of-conduct]",
   "imageSize": 50,
-  "commit": true,
+  "commit": false,
   "commitConvention": "angular",
   "contributors": [
     {
@@ -23,5 +24,6 @@
       ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }

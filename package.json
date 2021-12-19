@@ -1,5 +1,6 @@
 {
   "name": "@trezy/bigmath",
+  "description": "A library for handling arithmetic operations between integers, floats, `BigInt`s, and arbitrary precision decimals.",
   "version": "0.0.0-development",
   "author": "Trezy <t@trezy.com> (https://trezy.com)",
   "contributors": [

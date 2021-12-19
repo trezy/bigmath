@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/trezy/bigmath/compare/v1.1.0...v1.2.0) (2021-12-19)
+
+
+### Features
+
+* **exports:** add `add`, `subtract`, `multiply`, and `divide` methods directly to main exports ([6e13f14](https://github.com/trezy/bigmath/commit/6e13f1439af128ee49b75758be85551bc3460abe))
+
 # [1.1.0](https://github.com/trezy/bigmath/compare/v1.0.0...v1.1.0) (2021-12-19)
 
 

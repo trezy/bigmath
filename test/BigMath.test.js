@@ -8,6 +8,7 @@ import { expect } from 'chai'
 // Local imports
 import { BigFloat } from '../lib/BigFloat.js'
 import { BigMath } from '../lib/BigMath.js'
+import { ERROR_CONFIGS } from '../lib/errors.js'
 import { getString } from './test-helpers/getString.js'
 import { getValueOf } from './test-helpers/getValueOf.js'
 
@@ -46,17 +47,17 @@ function testAlgebraicOperation(options) {
 			expect(operationResult).to.be.instanceOf(BigFloat)
 		})
 
-		it('returns the correct result for an arbitrary number of inputs', function () {
-			const operationResult = BigMath[operationName](...operationInputValues)
+		it('is chainable', function () {
+			const operationResult = operationInputValues.reduce((accumulator, value) => {
+				return accumulator[operationName](value)
+			}, BigMath)
 
 			expect(operationResult.toString()).to.equal(getString(operationOutputValue))
 			expect(operationResult.valueOf()).to.equal(getValueOf(operationOutputValue))
 		})
 
-		it('is chainable', function () {
-			const operationResult = operationInputValues.reduce((accumulator, value) => {
-				return accumulator[operationName](value)
-			}, BigMath)
+		it('returns the correct result for an arbitrary number of inputs', function () {
+			const operationResult = BigMath[operationName](...operationInputValues)
 
 			expect(operationResult.toString()).to.equal(getString(operationOutputValue))
 			expect(operationResult.valueOf()).to.equal(getValueOf(operationOutputValue))

@@ -9,7 +9,7 @@ import { expect } from 'chai'
 import { BigFloat } from '../lib/BigFloat.js'
 import { getString } from './test-helpers/getString.js'
 import { getValueOf } from './test-helpers/getValueOf.js'
-import { InputNotNumberLike } from '../lib/errors.js'
+import { ERROR_CONFIGS } from '../lib/errors.js'
 
 
 
@@ -17,7 +17,7 @@ import { InputNotNumberLike } from '../lib/errors.js'
 
 function testAlgebraicOperation(options) {
 	const {
-		baseValue,
+		inputValue,
 		operationInputValues,
 		operationOutputValues,
 		operationName,
@@ -25,15 +25,15 @@ function testAlgebraicOperation(options) {
 
 	describe(`${operationName}()`, function () {
 		it('is idempotent', function () {
-			const instance = new BigFloat(baseValue)
+			const instance = new BigFloat(inputValue)
 			instance[operationName](100)
 
-			expect(instance.toString()).to.equal(getString(baseValue))
-			expect(instance.valueOf()).to.equal(getValueOf(baseValue))
+			expect(instance.toString()).to.equal(getString(inputValue))
+			expect(instance.valueOf()).to.equal(getValueOf(inputValue))
 		})
 
 		it('returns the correct result for a single input', function () {
-			const instance = new BigFloat(baseValue)
+			const instance = new BigFloat(inputValue)
 			const operationResult = instance[operationName](operationInputValues.single)
 
 			expect(operationResult.toString()).to.equal(getString(operationOutputValues.single))
@@ -41,7 +41,7 @@ function testAlgebraicOperation(options) {
 		})
 
 		it('returns the correct result for an arbitrary number of inputs', function () {
-			const instance = new BigFloat(baseValue)
+			const instance = new BigFloat(inputValue)
 			const operationResult = instance[operationName](...operationInputValues.arbitrary)
 
 			expect(operationResult.toString()).to.equal(getString(operationOutputValues.arbitrary))
@@ -63,9 +63,8 @@ function testConstructorInputType(options) {
 
 		describe('toString()', function () {
 			it('outputs to string with the correct precision', function () {
-				const baseValue = inputValue
-				const instance = new BigFloat(baseValue)
-				const stringValue = getString(baseValue)
+				const instance = new BigFloat(inputValue)
+				const stringValue = getString(inputValue)
 
 				expect(instance.toString()).to.equal(stringValue)
 			})
@@ -73,9 +72,8 @@ function testConstructorInputType(options) {
 
 		describe('valueOf()', function () {
 			it('outputs to BigInt with the correct value', function () {
-				const baseValue = inputValue
-				const instance = new BigFloat(baseValue)
-				const calculableValue = getValueOf(baseValue)
+				const instance = new BigFloat(inputValue)
+				const calculableValue = getValueOf(inputValue)
 
 				expect(instance.valueOf()).to.equal(calculableValue)
 			})
@@ -125,14 +123,14 @@ describe('BigFloat', function () {
 		describe('when given an invalid input', function () {
 			it('throws an error', function () {
 				const inputValue = 'foobar'
-				const expectedError = InputNotNumberLike(inputValue)
-				expect(() => new BigFloat(inputValue)).to.throw(TypeError, expectedError.message)
+				expect(() => new BigFloat(inputValue))
+					.to.throw(ERROR_CONFIGS.InputNotNumberLike.errorType, ERROR_CONFIGS.InputNotNumberLike.messageGenerator(inputValue))
 			})
 		})
 	})
 
 	testAlgebraicOperation({
-		baseValue: 100,
+		inputValue: 100,
 		operationName: 'add',
 		operationInputValues: {
 			single: 100,
@@ -145,7 +143,7 @@ describe('BigFloat', function () {
 	})
 
 	testAlgebraicOperation({
-		baseValue: 100,
+		inputValue: 100,
 		operationName: 'divide',
 		operationInputValues: {
 			single: 2,
@@ -158,7 +156,7 @@ describe('BigFloat', function () {
 	})
 
 	testAlgebraicOperation({
-		baseValue: 100,
+		inputValue: 100,
 		operationName: 'multiply',
 		operationInputValues: {
 			single: 2,
@@ -171,7 +169,7 @@ describe('BigFloat', function () {
 	})
 
 	testAlgebraicOperation({
-		baseValue: 100,
+		inputValue: 100,
 		operationName: 'subtract',
 		operationInputValues: {
 			single: 100,

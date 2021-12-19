@@ -9,6 +9,7 @@ import { expect } from 'chai'
 import { BigFloat } from '../lib/BigFloat.js'
 import { getString } from './test-helpers/getString.js'
 import { getValueOf } from './test-helpers/getValueOf.js'
+import { InputNotNumberLike } from '../lib/errors.js'
 
 
 
@@ -119,6 +120,14 @@ describe('BigFloat', function () {
 		testConstructorInputType({
 			inputValue: new BigFloat(100),
 			typeName: 'BigFloat',
+		})
+
+		describe('when given an invalid input', function () {
+			it('throws an error', function () {
+				const inputValue = 'foobar'
+				const expectedError = InputNotNumberLike(inputValue)
+				expect(() => new BigFloat(inputValue)).to.throw(TypeError, expectedError.message)
+			})
 		})
 	})
 

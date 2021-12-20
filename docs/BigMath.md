@@ -8,7 +8,7 @@ The `BigMath` export contains a suite of functions for performing arithmetic ope
 
 ### A note on arithmetic operations
 
-All of the arithmetic functions described below follow these three principles:
+All of the arithmetic functions described below follow these three principles unless otherwise noted:
 
 * **They are variadic**
     Each operation can receive any number of inputs (requiring at least one). Additionally, operations will be performed on each input sequentially.
@@ -39,7 +39,7 @@ All of the arithmetic functions described below follow these three principles:
 
 
 
-### `bigMath.add(input[, input])`
+### `BigMath.add(input[, input])`
 
 Add any number of number-like inputs.
 
@@ -52,7 +52,7 @@ const result = BigMath.add(10, 5, 2)
 
 
 
-### `bigMath.subtract(input[, input])`
+### `BigMath.subtract(input[, input])`
 
 Subtract any number of number-like inputs.
 
@@ -65,7 +65,7 @@ const result = BigMath.subtract(10, 5, 2)
 
 
 
-### `bigMath.multiply(input[, input])`
+### `BigMath.multiply(input[, input])`
 
 Multiply any number of number-like inputs.
 
@@ -78,11 +78,24 @@ const result = BigMath.multiply(10, 5, 2)
 
 
 
-### `bigMath.divide(input[, input])`
+### `BigMath.divide(input[, input])`
 
 Divide any number of number-like inputs.
 
 ```javascript
 const result = BigMath.divide(10, 5, 2)
 // (10 / 5) / 2 === 1
+```
+
+
+
+
+
+### `BigMath.round(input`
+
+Returns a new `BigFloat` with the input value rounded to the nearest integer. _Not variadic._
+
+```javascript
+BigMath.round(100.5) // 101.000000000000000000
+BigMath.round(100.4) // 100.000000000000000000
 ```

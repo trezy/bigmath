@@ -19,6 +19,7 @@ const EXPECTED_EXPORTS = [
   'ceil',
   'ceiling',
   'divide',
+  'floor',
   'isNumberLike',
   'multiply',
   'round',

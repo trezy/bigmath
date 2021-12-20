@@ -111,3 +111,15 @@ Returns a new `BigFloat` with the input value rounded up to the next integer. _N
 ```javascript
 BigMath.ceiling(100.4) // 101.000000000000000000
 ```
+
+
+
+
+
+### `bigFloat.floor(input)`
+
+Returns a new `BigFloat` with the input value rounded down to its integer. _Not variadic._
+
+```javascript
+BigMath.floor(100.5) // 100.000000000000000000
+```

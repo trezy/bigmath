@@ -156,4 +156,20 @@ describe('BigMath', function () {
 				.to.throw(ERROR_CONFIGS.TooManyArguments.errorType, ERROR_CONFIGS.TooManyArguments.messageGenerator('`BigMath.ceiling`', 1, 2))
 		})
 	})
+
+	describe('floor()', function () {
+		it('rounds down', function () {
+			const inputValue = 100.5
+			const outputValue = 100
+			const operationResult = BigMath.floor(inputValue)
+
+			expect(operationResult.toString()).to.equal(getString(outputValue))
+			expect(operationResult.valueOf()).to.equal(getValueOf(outputValue))
+		})
+
+		it('throws an error when receiving more than one input', function () {
+			expect(() => BigMath.floor(1, 1))
+				.to.throw(ERROR_CONFIGS.TooManyArguments.errorType, ERROR_CONFIGS.TooManyArguments.messageGenerator('`BigMath.floor`', 1, 2))
+		})
+	})
 })

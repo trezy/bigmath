@@ -16,9 +16,12 @@ const EXPECTED_EXPORTS = [
   'add',
   'BigMath',
   'BigFloat',
+  'ceil',
+  'ceiling',
   'divide',
   'isNumberLike',
   'multiply',
+  'round',
   'subtract',
 ]
 

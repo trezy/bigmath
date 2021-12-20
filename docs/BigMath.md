@@ -99,3 +99,15 @@ Returns a new `BigFloat` with the input value rounded to the nearest integer. _N
 BigMath.round(100.5) // 101.000000000000000000
 BigMath.round(100.4) // 100.000000000000000000
 ```
+
+
+
+
+
+### `bigFloat.ceiling(input)`
+
+Returns a new `BigFloat` with the input value rounded up to the next integer. _Not variadic._
+
+```javascript
+BigMath.ceiling(100.4) // 101.000000000000000000
+```

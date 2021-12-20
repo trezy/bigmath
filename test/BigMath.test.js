@@ -140,4 +140,20 @@ describe('BigMath', function () {
 				.to.throw(ERROR_CONFIGS.TooManyArguments.errorType, ERROR_CONFIGS.TooManyArguments.messageGenerator('`BigMath.round`', 1, 2))
 		})
 	})
+
+	describe('ceiling()', function () {
+		it('rounds up', function () {
+			const inputValue = 100.4
+			const outputValue = 101
+			const operationResult = BigMath.ceiling(inputValue)
+
+			expect(operationResult.toString()).to.equal(getString(outputValue))
+			expect(operationResult.valueOf()).to.equal(getValueOf(outputValue))
+		})
+
+		it('throws an error when receiving more than one input', function () {
+			expect(() => BigMath.ceiling(1, 1))
+				.to.throw(ERROR_CONFIGS.TooManyArguments.errorType, ERROR_CONFIGS.TooManyArguments.messageGenerator('`BigMath.ceiling`', 1, 2))
+		})
+	})
 })

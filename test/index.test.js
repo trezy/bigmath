@@ -19,6 +19,7 @@ const EXPECTED_EXPORTS = [
   'ceil',
   'ceiling',
   'divide',
+  'divideRound',
   'floor',
   'isNumberLike',
   'multiply',
@@ -28,8 +29,12 @@ const EXPECTED_EXPORTS = [
 
 describe('exports', function () {
   EXPECTED_EXPORTS.forEach(exportName => {
-    it(`exports \`${exportName}\``, function () {
+    it(`includes \`${exportName}\``, function () {
       expect(AllExports).to.have.property(exportName)
     })
+  })
+
+  it('has no extraneous exports', function () {
+    expect(Object.keys(AllExports).sort()).to.deep.equal(EXPECTED_EXPORTS.sort())
   })
 })

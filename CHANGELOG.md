@@ -1,3 +1,11 @@
+# [1.6.0](https://github.com/trezy/bigmath/compare/v1.5.0...v1.6.0) (2021-12-20)
+
+
+### Features
+
+* **bigmath:** add `BigMath.maximum()` ([b87efe4](https://github.com/trezy/bigmath/commit/b87efe48a0c6a5b7bd6797126d7c40067f05eeb5))
+* **bigmath:** add `BigMath.minimum()` ([9f53c1c](https://github.com/trezy/bigmath/commit/9f53c1ca8c1f496fdf441a45d39b64037b6b7744))
+
 # [1.4.0](https://github.com/trezy/bigmath/compare/v1.3.0...v1.4.0) (2021-12-20)
 
 

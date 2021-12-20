@@ -129,6 +129,19 @@ BigMath.floor(100.5) // 100.000000000000000000
 
 
 
+### `BigMath.maximum(input, input[, input])`
+_Alias: `BigMath.max()`_
+
+Returns the largest input as a `BigFloat`.
+
+```javascript
+BigMath.maximum(2, 1, 3) // 1
+```
+
+
+
+
+
 ### `BigMath.minimum(input, input[, input])`
 _Alias: `BigMath.min()`_
 

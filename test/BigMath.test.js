@@ -173,9 +173,19 @@ describe('BigMath', function () {
 		})
 	})
 
-	describe('min()', function() {
+	describe('maximum()', function() {
+		it('returns the largest number from its inputs', function () {
+			const operationResult = BigMath.maximum(9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
+			const outputValue = 9
+
+			expect(operationResult.toString()).to.equal(getString(outputValue))
+			expect(operationResult.valueOf()).to.equal(getValueOf(outputValue))
+		})
+	})
+
+	describe('minimum()', function() {
 		it('returns the smallest number from its inputs', function () {
-			const operationResult = BigMath.min(9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
+			const operationResult = BigMath.minimum(9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
 			const outputValue = 0
 
 			expect(operationResult.toString()).to.equal(getString(outputValue))

@@ -148,6 +148,22 @@ roundedFoo.toString() // 101.000000000000000000
 
 
 
+### `bigFloat.ceiling()`
+
+Returns a new `BigFloat` with the current value rounded up to the next integer.
+
+```javascript
+const foo = new BigFloat(100.4)
+const roundedFoo = foo.ceiling()
+
+foo.toString()        // 100.000000000000000000
+roundedFoo.toString() // 101.000000000000000000
+```
+
+
+
+
+
 ### Usage with unary operators
 
 While we recommend using the `BigFloat`/`BigMath` arithmetic methods for performing calculations, `BigFloat` is _technically_ compatible with unary and binary operators like `+`, `-`, `*`, `/`, etc. There are some caveats, though. First, both sides of the operation must be either a `BigFloat` or a `BigInt`, but operations that use number literals will throw an error.

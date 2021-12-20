@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/trezy/bigmath/compare/v1.3.0...v1.4.0) (2021-12-20)
+
+
+### Features
+
+* **bigfloat:** add `BigFloat.ceiling()` ([8358ec3](https://github.com/trezy/bigmath/commit/8358ec343cb06c2522b6c6597ef155b7309d1489))
+* **bigmath:** add `BigMath.ceiling()` ([4ec7d8a](https://github.com/trezy/bigmath/commit/4ec7d8ae7be8adf5c83555fc3af8814c81a53f12))
+
 # [1.3.0](https://github.com/trezy/bigmath/compare/v1.2.0...v1.3.0) (2021-12-19)
 
 

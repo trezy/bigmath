@@ -132,6 +132,22 @@ See [`BigMath.divide()`](./BigMath.md#divide) for more details.
 
 
 
+### `bigFloat.round()`
+
+Returns a new `BigFloat` with the current value rounded to the nearest integer.
+
+```javascript
+const foo = new BigFloat(100.5)
+const roundedFoo = foo.round()
+
+foo.toString()        // 100.500000000000000000
+roundedFoo.toString() // 101.000000000000000000
+```
+
+
+
+
+
 ### Usage with unary operators
 
 While we recommend using the `BigFloat`/`BigMath` arithmetic methods for performing calculations, `BigFloat` is _technically_ compatible with unary and binary operators like `+`, `-`, `*`, `/`, etc. There are some caveats, though. First, both sides of the operation must be either a `BigFloat` or a `BigInt`, but operations that use number literals will throw an error.

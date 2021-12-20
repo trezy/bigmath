@@ -104,7 +104,7 @@ BigMath.round(100.4) // 100.000000000000000000
 
 
 
-### `bigFloat.ceiling(input)`
+### `BigMath.ceiling(input)`
 
 Returns a new `BigFloat` with the input value rounded up to the next integer. _Not variadic._
 
@@ -116,7 +116,7 @@ BigMath.ceiling(100.4) // 101.000000000000000000
 
 
 
-### `bigFloat.floor(input)`
+### `BigMath.floor(input)`
 
 Returns a new `BigFloat` with the input value rounded down to its integer. _Not variadic._
 

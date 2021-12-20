@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/trezy/bigmath/compare/v1.2.0...v1.3.0) (2021-12-19)
+
+
+### Features
+
+* **bigfloat:** add `BigFloat.round()` ([ca2ee6e](https://github.com/trezy/bigmath/commit/ca2ee6ee1fba6b94e409e6de0ee118aa32eb67bb))
+* **bigmath:** add `BigMath.round()` ([a5231d2](https://github.com/trezy/bigmath/commit/a5231d280016dde73f6a9854ffe117b65bf8b044))
+
 # [1.2.0](https://github.com/trezy/bigmath/compare/v1.1.0...v1.2.0) (2021-12-19)
 
 

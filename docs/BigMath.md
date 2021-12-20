@@ -91,7 +91,7 @@ const result = BigMath.divide(10, 5, 2)
 
 
 
-### `BigMath.round(input`
+### `BigMath.round(input)`
 
 Returns a new `BigFloat` with the input value rounded to the nearest integer. _Not variadic._
 

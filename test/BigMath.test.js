@@ -172,4 +172,14 @@ describe('BigMath', function () {
 				.to.throw(ERROR_CONFIGS.TooManyArguments.errorType, ERROR_CONFIGS.TooManyArguments.messageGenerator('`BigMath.floor`', 1, 2))
 		})
 	})
+
+	describe('min()', function() {
+		it('returns the smallest number from its inputs', function () {
+			const operationResult = BigMath.min(9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
+			const outputValue = 0
+
+			expect(operationResult.toString()).to.equal(getString(outputValue))
+			expect(operationResult.valueOf()).to.equal(getValueOf(outputValue))
+		})
+	})
 })

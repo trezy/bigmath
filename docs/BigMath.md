@@ -105,6 +105,7 @@ BigMath.round(100.4) // 100.000000000000000000
 
 
 ### `BigMath.ceiling(input)`
+_Alias: `BigMath.ceil()`_
 
 Returns a new `BigFloat` with the input value rounded up to the next integer. _Not variadic._
 
@@ -122,4 +123,17 @@ Returns a new `BigFloat` with the input value rounded down to its integer. _Not 
 
 ```javascript
 BigMath.floor(100.5) // 100.000000000000000000
+```
+
+
+
+
+
+### `BigMath.minimum(input, input[, input])`
+_Alias: `BigMath.min()`_
+
+Returns the smallest input as a `BigFloat`.
+
+```javascript
+BigMath.minimum(2, 1, 3) // 1
 ```

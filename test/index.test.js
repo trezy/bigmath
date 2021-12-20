@@ -22,6 +22,8 @@ const EXPECTED_EXPORTS = [
   'divideRound',
   'floor',
   'isNumberLike',
+  'min',
+  'minimum',
   'multiply',
   'round',
   'subtract',

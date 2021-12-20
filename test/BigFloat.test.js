@@ -248,4 +248,33 @@ describe('BigFloat', function () {
 			expect(operationResult.valueOf()).to.equal(getValueOf(outputValue))
 		})
 	})
+
+	describe('floor()', function () {
+		it('is idempotent', function () {
+			const inputValue = 100.5
+			const instance = new BigFloat(inputValue)
+			instance.floor()
+
+			expect(instance.toString()).to.equal(getString(inputValue))
+			expect(instance.valueOf()).to.equal(getValueOf(inputValue))
+		})
+
+		it('returns a BigFloat', function () {
+			const inputValue = 100.5
+			const instance = new BigFloat(inputValue)
+			const operationResult = instance.floor()
+
+			expect(operationResult).to.be.instanceOf(BigFloat)
+		})
+
+		it('rounds down', function () {
+			const inputValue = 100.5
+			const outputValue = 100
+			const instance = new BigFloat(inputValue)
+			const operationResult = instance.floor()
+
+			expect(operationResult.toString()).to.equal(getString(outputValue))
+			expect(operationResult.valueOf()).to.equal(getValueOf(outputValue))
+		})
+	})
 })

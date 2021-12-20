@@ -156,7 +156,23 @@ Returns a new `BigFloat` with the current value rounded up to the next integer.
 const foo = new BigFloat(100.4)
 const roundedFoo = foo.ceiling()
 
-foo.toString()        // 100.000000000000000000
+foo.toString()        // 100.400000000000000000
+roundedFoo.toString() // 101.000000000000000000
+```
+
+
+
+
+
+### `bigFloat.floor()`
+
+Returns a new `BigFloat` with the current value rounded down to its integer.
+
+```javascript
+const foo = new BigFloat(100.5)
+const roundedFoo = foo.floor()
+
+foo.toString()        // 100.500000000000000000
 roundedFoo.toString() // 101.000000000000000000
 ```
 

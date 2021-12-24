@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/trezy/bigmath/compare/v1.6.0...v1.7.0) (2021-12-24)
+
+
+### Features
+
+* **bigmath:** add `BigMath.exponentiate()` ([78f5dab](https://github.com/trezy/bigmath/commit/78f5dab7e780cede6a289237c0a3499d20e05708))
+
 # [1.6.0](https://github.com/trezy/bigmath/compare/v1.5.0...v1.6.0) (2021-12-20)
 
 

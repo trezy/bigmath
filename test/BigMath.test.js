@@ -192,4 +192,14 @@ describe('BigMath', function () {
 			expect(operationResult.valueOf()).to.equal(getValueOf(outputValue))
 		})
 	})
+
+	describe('exponentiate()', function() {
+		it('returns the smallest number from its inputs', function () {
+			const operationResult = BigMath.exponentiate(2, 5)
+			const outputValue = 32
+
+			expect(operationResult.toString()).to.equal(getString(outputValue))
+			expect(operationResult.valueOf()).to.equal(getValueOf(outputValue))
+		})
+	})
 })

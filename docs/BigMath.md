@@ -117,6 +117,19 @@ BigMath.ceiling(100.4) // 101.000000000000000000
 
 
 
+### `BigMath.exponentiate(base, exponent)`
+_Alias: `BigMath.pow()`, `BigMath.power()`_
+
+Returns a new `BigFloat` with the result of raising the `base` to the power of `exponent`. _Not variadic._
+
+```javascript
+BigMath.exponentiate(2, 5) // 32.000000000000000000
+```
+
+
+
+
+
 ### `BigMath.floor(input)`
 
 Returns a new `BigFloat` with the input value rounded down to its integer. _Not variadic._

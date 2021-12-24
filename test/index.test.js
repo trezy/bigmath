@@ -20,6 +20,7 @@ const EXPECTED_EXPORTS = [
   'ceiling',
   'divide',
   'divideRound',
+  'exponentiate',
   'floor',
   'isNumberLike',
   'max',
@@ -27,6 +28,8 @@ const EXPECTED_EXPORTS = [
   'min',
   'minimum',
   'multiply',
+  'pow',
+  'power',
   'round',
   'subtract',
 ]

@@ -277,4 +277,11 @@ describe('BigFloat', function () {
 			expect(operationResult.valueOf()).to.equal(getValueOf(outputValue))
 		})
 	})
+
+	describe('toBigInt()', function () {
+		it('returns the current value as a `BigInt`', function () {
+			const instance = new BigFloat(1)
+			expect(instance.toBigInt()).to.be.a('bigint')
+		})
+	})
 })

@@ -40,6 +40,20 @@ This is a `BigInt` used to convert numbers for internal storage. The default val
 
 
 
+### `bigFloat.toBigInt()`
+
+Returns the current value of the `BigFloat` as a `BigInt`. Note that this does truncate the decimal value.
+
+```javascript
+const foo = new BigFloat(100.1)
+
+console.log(foo.toBigInt()) // Outputs `BigInt(100)`
+```
+
+
+
+
+
 ### `bigFloat.toString()`
 
 Returns the accurate string value of the `BigFloat`.

@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/trezy/bigmath/compare/v1.7.0...v1.8.0) (2021-12-27)
+
+
+### Features
+
+* **bigfloat:** add `BigFloat.toBigInt()` ([f9b0943](https://github.com/trezy/bigmath/commit/f9b0943a796810a3ea1a12a6e7b43ba1823c7c63))
+
 # [1.7.0](https://github.com/trezy/bigmath/compare/v1.6.0...v1.7.0) (2021-12-24)
 
 
